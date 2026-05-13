@@ -8,9 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 
@@ -18,7 +16,7 @@
 
 <!-- NAVBAR -->
 <nav class="flex justify-between items-center px-8 py-5 bg-black/20 backdrop-blur-md sticky top-0 z-50">
-  <h1 class="text-3xl font-extrabold tracking-wide">VORTEX GYM</h1>
+  <h1 class="text-3xl font-extrabold">VORTEX GYM</h1>
 
   <div class="flex gap-6 text-lg font-medium">
     <a href="#home">Home</a>
@@ -40,7 +38,7 @@
     </h2>
 
     <p class="text-lg mb-8">
-      VORTEX GYM is a teen gym for ages 13–18 focused on strength, confidence, and fitness.
+      Teen gym for ages 13–18. Strong body, strong mind, strong future.
     </p>
 
     <button class="bg-white text-blue-600 px-6 py-3 rounded-2xl font-bold">
@@ -52,8 +50,8 @@
     <h3 class="text-2xl font-bold mb-4">Why Teens Love Us</h3>
     <ul class="space-y-2">
       <li>✔ Friendly coaches</li>
-      <li>✔ Safe workouts</li>
-      <li>✔ Affordable plans</li>
+      <li>✔ Safe training</li>
+      <li>✔ Affordable prices</li>
       <li>✔ Fun challenges</li>
       <li>✔ Social community</li>
     </ul>
@@ -65,13 +63,13 @@
 <section id="about" class="px-8 md:px-20 py-20 bg-black/15">
   <h2 class="text-4xl font-bold mb-6">About Us</h2>
   <p class="text-lg">
-    VORTEX GYM is built for teenagers who want to become stronger, healthier, and more confident in a safe environment with professional coaching.
+    VORTEX GYM is a modern teenage fitness gym designed to build strength, confidence, and discipline in a fun and safe environment.
   </p>
 </section>
 
 <!-- PRICING -->
 <section id="pricing" class="px-8 md:px-20 py-24">
-  <h2 class="text-4xl font-bold text-center mb-12">Memberships</h2>
+  <h2 class="text-4xl font-bold text-center mb-12">Membership Plans</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
 
@@ -84,13 +82,13 @@
     <div class="bg-white p-8 rounded-3xl text-blue-700">
       <h3 class="text-2xl font-bold">Pro Teen</h3>
       <p class="text-4xl font-bold">499 EGP</p>
-      <p>Classes + gym access</p>
+      <p>Gym + classes</p>
     </div>
 
     <div class="bg-white/10 p-8 rounded-3xl">
       <h3 class="text-2xl font-bold">Elite</h3>
       <p class="text-4xl font-bold">699 EGP</p>
-      <p>Personal trainer + nutrition</p>
+      <p>Trainer + nutrition</p>
     </div>
 
   </div>
@@ -138,7 +136,7 @@
   </div>
 </section>
 
-<!-- BMI -->
+<!-- BMI CALCULATOR -->
 <section id="bmi" class="px-8 md:px-20 py-20 bg-black/10">
 
   <div class="max-w-3xl mx-auto bg-white/10 p-10 rounded-3xl text-center">
@@ -162,33 +160,40 @@
 
 </section>
 
-<!-- SOCIAL -->
-<section class="px-8 md:px-20 py-20 text-center bg-black/15">
-
-  <h2 class="text-4xl font-bold mb-6">Follow Us</h2>
-
-  <div class="flex justify-center gap-6">
-    <button class="bg-pink-500 px-6 py-3 rounded-2xl">Instagram</button>
-    <button class="bg-black px-6 py-3 rounded-2xl">TikTok</button>
-    <button class="bg-blue-700 px-6 py-3 rounded-2xl">Facebook</button>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
+<!-- CONTACT (FULL FORM) -->
 <section id="contact" class="px-8 md:px-20 py-24">
 
-  <h2 class="text-4xl font-bold mb-6">Contact</h2>
+  <div class="max-w-4xl mx-auto bg-white/10 p-10 rounded-3xl">
 
-  <input class="w-full p-3 mb-4 rounded-xl text-black" placeholder="Name"/>
-  <input class="w-full p-3 mb-4 rounded-xl text-black" placeholder="Email"/>
-  <textarea class="w-full p-3 rounded-xl text-black" placeholder="Message"></textarea>
+    <h2 class="text-4xl font-bold text-center mb-10">Contact Us</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <input type="text" placeholder="Your Name"
+        class="p-3 rounded-xl text-black"/>
+
+      <input type="email" placeholder="Your Email"
+        class="p-3 rounded-xl text-black"/>
+
+    </div>
+
+    <input type="text" placeholder="Subject"
+      class="w-full mt-4 p-3 rounded-xl text-black"/>
+
+    <textarea rows="5" placeholder="Your Message"
+      class="w-full mt-4 p-3 rounded-xl text-black"></textarea>
+
+    <button class="mt-6 w-full bg-white text-blue-600 py-3 rounded-2xl font-bold">
+      Send Message
+    </button>
+
+  </div>
 
 </section>
 
 <!-- FOOTER -->
 <footer class="text-center py-8 bg-black/20">
-  © 2026 VORTEX GYM
+  © 2026 VORTEX GYM — Teen Fitness Revolution
 </footer>
 
 <!-- BMI SCRIPT -->
@@ -209,7 +214,7 @@ function calcBMI(){
   else status = "Obese";
 
   document.getElementById("result").innerHTML =
-    "BMI: " + bmi + " (" + status + ")";
+    `BMI: ${bmi} (${status})`;
 }
 </script>
 
